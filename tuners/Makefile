@@ -1,0 +1,29 @@
+# SPDX-License-Identifier: GPL-2.0
+#
+# Makefile for common V4L/DVB tuners
+#
+
+tda18271-objs := tda18271-maps.o tda18271-common.o tda18271-fe.o
+
+obj-$(CONFIG_MEDIA_TUNER_XC5000) += xc5000.o
+obj-$(CONFIG_MEDIA_TUNER_XC4000) += xc4000.o
+obj-$(CONFIG_MEDIA_TUNER_R820T) += r820t.o
+
+obj-$(CONFIG_MEDIA_TUNER_MT20XX) += mt20xx.o
+obj-$(CONFIG_MEDIA_TUNER_TDA8290) += tda8290.o
+obj-$(CONFIG_MEDIA_TUNER_TDA9887) += tda9887.o
+obj-$(CONFIG_MEDIA_TUNER_TDA827X) += tda827x.o
+obj-$(CONFIG_MEDIA_TUNER_TDA18271) += tda18271.o
+obj-$(CONFIG_MEDIA_TUNER_TDA18273) += tda18273.o
+obj-$(CONFIG_MEDIA_TUNER_TDA18218) += tda18218.o
+obj-$(CONFIG_MEDIA_TUNER_TDA18212) += tda18212.o
+obj-$(CONFIG_MEDIA_TUNER_SI2157) += si2157.o
+obj-$(CONFIG_MEDIA_TUNER_AV201X) += av201x.o
+obj-$(CONFIG_MEDIA_TUNER_STV6120) += stv6120.o
+obj-$(CONFIG_MEDIA_TUNER_R848) += r848.o
+obj-$(CONFIG_MEDIA_TUNER_MXL603) += mxl603.o
+obj-$(CONFIG_MEDIA_TUNER_TDA18250) += tda18250.o
+obj-$(CONFIG_MEDIA_TUNER_RDA5816) += rda5816.o
+
+
+ccflags-y += -I$(KBUILD_EXTMOD)/frontends
